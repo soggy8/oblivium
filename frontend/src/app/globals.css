@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #121212;
+  --color-ink-card: #1a1a1a;
+  --color-gold: #c6a15b;
+  --color-gold-bright: #e0be7a;
+  --color-parchment: #f5f2ea;
+  --color-smoke: #a9a196;
+  --font-display: var(--font-display), serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  background: #0a0a0a;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(198, 161, 91, 0.18), transparent 36rem),
+    #0a0a0a;
+  color: #f5f2ea;
+  font-feature-settings: "ss01", "ss02", "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(224, 190, 122, 0.35);
+  color: #f5f2ea;
+}
+
+*:focus-visible {
+  outline: 2px solid rgba(224, 190, 122, 0.8);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+/* While the IntroSequence is on screen, suppress the global custom cursor,
+   mouse spotlight, grain, vignette, and scroll progress bar so the intro
+   shows nothing but the single white dot on a black background. */
+body.intro-active .grain,
+body.intro-active .vignette {
+  display: none !important;
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, rgba(198, 161, 91, 0.85), transparent);
+}
+
+.bg-radial-gold {
+  background-image: radial-gradient(circle at 50% 0%, rgba(198, 161, 91, 0.22), transparent 42%);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 70px rgba(198, 161, 91, 0.16);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(198, 161, 91, 0.32);
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.78 0 0 0 0 0.63 0 0 0 0 0.36 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+}
+
+.vignette {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.ring-frame {
+  position: relative;
+}
+
+.ring-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(198, 161, 91, 0.18);
+  pointer-events: none;
+  transition: border-color 0.6s ease;
+}
+
+.ring-frame:hover::before {
+  border-color: rgba(224, 190, 122, 0.55);
+}
+
+.case-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 0%, rgba(224, 190, 122, 0.18), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  z-index: -1;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+}
+
+.case-card:hover::after {
+  opacity: 1;
+}
+
+.input-shell {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.input-shell input,
+.input-shell select,
+.input-shell textarea {
+  background: rgba(18, 18, 18, 0.85);
+  border: 1px solid rgba(198, 161, 91, 0.18);
+  color: #f5f2ea;
+  padding: 1rem 1.1rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.input-shell input:focus,
+.input-shell select:focus,
+.input-shell textarea:focus {
+  outline: none;
+  border-color: rgba(224, 190, 122, 0.8);
+  box-shadow: 0 0 0 4px rgba(224, 190, 122, 0.08);
+  background: rgba(20, 20, 20, 0.95);
+}
+
+.input-shell label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #a9a196;
+}
+
+.divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 161, 91, 0.45), transparent);
+}
