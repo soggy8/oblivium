@@ -62,7 +62,7 @@ export function CustomCursor() {
         <motion.div
           animate={{ scale: hovering ? 0 : 1, opacity: hovering ? 0 : 1 }}
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="h-1.5 w-1.5 rounded-full bg-gold-bright shadow-[0_0_12px_rgba(224,190,122,0.65)]"
+          className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.55)]"
         />
       </motion.div>
 
@@ -74,7 +74,7 @@ export function CustomCursor() {
         <motion.div
           animate={{
             scale: hovering ? 1.7 : 1,
-            borderColor: hovering ? "rgba(224,190,122,0.9)" : "rgba(198,161,91,0.55)",
+            borderColor: hovering ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.45)",
           }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="h-10 w-10 rounded-full border"

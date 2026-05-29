@@ -238,7 +238,7 @@ export function IntroSequence() {
                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
                 style={{
                   top: `${DOT_END}vh`,
-                  border: "1px solid rgba(224,190,122,0.7)",
+                  border: "1px solid rgba(255,255,255,0.7)",
                 }}
                 initial={{ width: 14, height: 14, opacity: 0.95 }}
                 animate={{
@@ -257,7 +257,7 @@ export function IntroSequence() {
         )}
       </AnimatePresence>
 
-      {/* ── Gold explosion expanding from impact point ── */}
+      {/* ── Light burst expanding from impact point ── */}
       <AnimatePresence>
         {isExploding && (
           <motion.div
@@ -268,8 +268,8 @@ export function IntroSequence() {
               width: "1vmax",
               height: "1vmax",
               background:
-                "radial-gradient(circle at center, #f5f2ea 0%, #e8c684 18%, #c6a15b 48%, #7a5020 80%, #1a0f00 100%)",
-              boxShadow: "0 0 80px 20px rgba(224,190,122,0.5)",
+                "radial-gradient(circle at center, #ffffff 0%, #e8e8e8 18%, #b0b0b0 48%, #404040 80%, #0a0a0a 100%)",
+              boxShadow: "0 0 80px 20px rgba(255,255,255,0.4)",
             }}
             initial={{ scale: 0.5 }}
             animate={{ scale: 320 }}

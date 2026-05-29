@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { LiveTime } from "@/components/LiveTime";
 import { ScrambleText } from "@/components/ScrambleText";
+import logoImage from "../../logo.png";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -29,7 +30,7 @@ export function SiteHeader() {
       transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-500 ${
         solid
-          ? "border-gold/15 bg-ink/85 backdrop-blur-xl"
+          ? "border-white/15 bg-ink/85 backdrop-blur-xl"
           : "border-transparent bg-transparent"
       }`}
     >
@@ -38,9 +39,13 @@ export function SiteHeader() {
         aria-label="Primary navigation"
       >
         <a href="#top" className="group flex items-center gap-3" data-cursor="hover">
-          <span className="grid h-10 w-10 place-items-center border border-gold/60 font-display text-base text-gold transition-colors duration-500 group-hover:border-gold-bright group-hover:text-gold-bright">
-            OA
-          </span>
+          <img
+            src={logoImage.src}
+            alt="Oblivium Atelier"
+            width={logoImage.width}
+            height={logoImage.height}
+            className="h-11 w-11 shrink-0 object-contain opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+          />
           <span className="hidden font-display text-xl font-semibold tracking-[0.16em] text-parchment sm:inline-flex">
             Oblivium Atelier
           </span>
@@ -55,7 +60,7 @@ export function SiteHeader() {
               data-cursor="hover"
             >
               <ScrambleText text={item.label} duration={420} />
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-white transition-all duration-500 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -64,10 +69,10 @@ export function SiteHeader() {
           <LiveTime />
           <a
             href="#contact"
-            className="group hidden items-center gap-2 rounded-full border border-gold/40 px-5 py-2 text-xs uppercase tracking-[0.28em] text-gold transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright md:inline-flex"
+            className="group hidden items-center gap-2 rounded-full border border-white/40 px-5 py-2 text-xs uppercase tracking-[0.28em] text-parchment transition-colors duration-300 hover:border-white hover:text-white md:inline-flex"
             data-cursor="hover"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-gold transition-transform duration-500 group-hover:scale-125" />
+            <span className="h-1.5 w-1.5 rounded-full bg-white transition-transform duration-500 group-hover:scale-125" />
             <ScrambleText text="Start" duration={360} />
           </a>
         </div>

@@ -2,12 +2,12 @@
 
 import { useEffect, useRef } from "react";
 
-type GoldDustProps = {
+type AmbientDustProps = {
   density?: number;
   className?: string;
 };
 
-export function GoldDust({ density = 32, className }: GoldDustProps) {
+export function AmbientDust({ density = 32, className }: AmbientDustProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -74,8 +74,8 @@ export function GoldDust({ density = 32, className }: GoldDustProps) {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(224, 190, 122, ${p.a * 0.55})`;
-        ctx.shadowColor = "rgba(224, 190, 122, 0.6)";
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.a * 0.55})`;
+        ctx.shadowColor = "rgba(255, 255, 255, 0.6)";
         ctx.shadowBlur = 6;
         ctx.fill();
       }

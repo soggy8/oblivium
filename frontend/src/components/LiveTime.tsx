@@ -45,7 +45,7 @@ export function LiveTime() {
       <span className="flex items-center gap-1.5">
         <span
           className={`relative flex h-1.5 w-1.5 ${
-            open ? "text-gold-bright" : "text-smoke"
+            open ? "text-white" : "text-smoke"
           }`}
         >
           <span className="absolute inset-0 animate-ping rounded-full bg-current opacity-60" />

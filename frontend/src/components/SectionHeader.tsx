@@ -14,8 +14,8 @@ export function SectionHeader({ eyebrow, title, text, align = "start" }: Props) 
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       <Reveal>
-        <p className="flex items-center gap-3 text-xs uppercase tracking-[0.42em] text-gold">
-          <span className="h-px w-8 bg-gold/70" />
+        <p className="flex items-center gap-3 text-xs uppercase tracking-[0.42em] text-parchment">
+          <span className="h-px w-8 bg-white/70" />
           {eyebrow}
         </p>
       </Reveal>

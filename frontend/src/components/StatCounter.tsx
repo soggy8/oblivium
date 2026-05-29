@@ -38,7 +38,7 @@ export function StatCounter({
       <div className="flex items-baseline gap-1 font-display text-5xl font-semibold leading-none tracking-[-0.04em] text-parchment md:text-6xl">
         {prefix ? <span>{prefix}</span> : null}
         <motion.span>{display}</motion.span>
-        {suffix ? <span className="text-gold">{suffix}</span> : null}
+        {suffix ? <span className="text-parchment">{suffix}</span> : null}
       </div>
       <p className="text-xs uppercase tracking-[0.28em] text-smoke">{label}</p>
     </div>

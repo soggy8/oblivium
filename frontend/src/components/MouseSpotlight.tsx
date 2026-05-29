@@ -15,7 +15,7 @@ export function MouseSpotlight() {
   const sx = useSpring(x, { stiffness: 70, damping: 22, mass: 1.1 });
   const sy = useSpring(y, { stiffness: 70, damping: 22, mass: 1.1 });
 
-  const background = useMotionTemplate`radial-gradient(620px circle at ${sx}px ${sy}px, rgba(224,190,122,0.16), transparent 65%)`;
+  const background = useMotionTemplate`radial-gradient(620px circle at ${sx}px ${sy}px, rgba(255,255,255,0.12), transparent 65%)`;
 
   useEffect(() => {
     if (typeof window === "undefined") return;

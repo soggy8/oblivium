@@ -21,11 +21,11 @@ export function Manifesto() {
     <section
       ref={ref}
       aria-label="Atelier manifesto"
-      className="relative overflow-hidden border-y border-gold/15 bg-ink py-32"
+      className="relative overflow-hidden border-y border-white/15 bg-ink py-32"
     >
       <motion.div
         style={{ rotate: monogramRotate, opacity: monogramOpacity }}
-        className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 text-gold"
+        className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 text-parchment"
         aria-hidden="true"
       >
         <Monogram className="h-[36rem] w-[36rem]" />
@@ -34,7 +34,7 @@ export function Manifesto() {
       <motion.p
         style={{ x: xWord }}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-10 select-none whitespace-nowrap text-center font-display text-[24vw] font-semibold leading-none tracking-[-0.06em] text-gold/[0.04]"
+        className="pointer-events-none absolute inset-x-0 top-10 select-none whitespace-nowrap text-center font-display text-[24vw] font-semibold leading-none tracking-[-0.06em] text-white/[0.04]"
       >
         OBLIVIUM
       </motion.p>
@@ -44,17 +44,17 @@ export function Manifesto() {
         className="relative z-10 mx-auto max-w-5xl px-5 text-center sm:px-8"
       >
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.42em] text-gold">
+          <p className="text-xs uppercase tracking-[0.42em] text-parchment">
             — The Atelier Manifesto
           </p>
         </Reveal>
         <p className="mt-10 font-display text-[2.4rem] leading-[1.05] tracking-[-0.04em] text-parchment text-glow sm:text-5xl md:text-7xl">
-          <span className="italic text-gold-bright">Quiet brands</span> are forgotten.
+          <span className="italic text-white">Quiet brands</span> are forgotten.
           <br />
-          We build the kind that <span className="italic text-gold-bright">linger</span>.
+          We build the kind that <span className="italic text-white">linger</span>.
         </p>
         <Reveal delay={0.25}>
-          <div className="mx-auto mt-14 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="mx-auto mt-14 h-px w-32 bg-gradient-to-r from-transparent via-parchment to-transparent" />
         </Reveal>
         <Reveal delay={0.4}>
           <p className="mx-auto mt-10 max-w-2xl text-base leading-7 text-smoke sm:text-lg">

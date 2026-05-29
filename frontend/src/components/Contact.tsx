@@ -13,14 +13,14 @@ const promises = [
 export function Contact() {
   return (
     <section id="contact" className="relative px-5 py-32 sm:px-8">
-      <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-7xl gold-line" />
+      <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-7xl accent-line" />
 
-      <div className="mx-auto grid max-w-7xl gap-12 border border-gold/20 bg-ink-soft/85 p-6 shadow-gold-glow backdrop-blur-md md:p-12 lg:grid-cols-[0.85fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-12 border border-white/20 bg-ink-soft/85 p-6 shadow-accent-glow backdrop-blur-md md:p-12 lg:grid-cols-[0.85fr_1fr]">
         <div className="flex flex-col justify-between gap-12">
           <div>
             <Reveal>
-              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.42em] text-gold">
-                <span className="h-px w-8 bg-gold/70" />
+              <p className="flex items-center gap-3 text-xs uppercase tracking-[0.42em] text-parchment">
+                <span className="h-px w-8 bg-white/70" />
                 Private intake
               </p>
             </Reveal>
@@ -37,13 +37,13 @@ export function Contact() {
           </div>
 
           <Reveal delay={0.3}>
-            <ul className="space-y-4 border-t border-gold/15 pt-7">
+            <ul className="space-y-4 border-t border-white/15 pt-7">
               {promises.map((promise) => (
                 <li
                   key={promise}
                   className="flex items-center gap-4 text-sm tracking-[0.04em] text-parchment"
                 >
-                  <span aria-hidden="true" className="text-gold">
+                  <span aria-hidden="true" className="text-parchment">
                     ◆
                   </span>
                   {promise}

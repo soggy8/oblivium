@@ -41,20 +41,20 @@ export function Process() {
         />
 
         <div ref={ref} className="relative pl-10">
-          <div className="absolute left-3 top-0 h-full w-px bg-gold/15" aria-hidden="true" />
+          <div className="absolute left-3 top-0 h-full w-px bg-white/15" aria-hidden="true" />
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-3 top-0 w-px bg-gradient-to-b from-gold-bright via-gold to-transparent"
+            className="absolute left-3 top-0 w-px bg-gradient-to-b from-white via-parchment to-transparent"
             aria-hidden="true"
           />
 
           <div className="grid gap-8">
             {steps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.08}>
-                <article className="group relative grid gap-3 border border-gold/15 bg-ink-soft p-7 transition-colors duration-500 hover:border-gold/40">
+                <article className="group relative grid gap-3 border border-white/15 bg-ink-soft p-7 transition-colors duration-500 hover:border-white/40">
                   <span
                     aria-hidden="true"
-                    className="absolute -left-[2.6rem] top-7 grid h-7 w-7 place-items-center rounded-full border border-gold/40 bg-ink font-display text-sm text-gold transition-colors duration-500 group-hover:border-gold-bright group-hover:text-gold-bright"
+                    className="absolute -left-[2.6rem] top-7 grid h-7 w-7 place-items-center rounded-full border border-white/40 bg-ink font-display text-sm text-parchment transition-colors duration-500 group-hover:border-white group-hover:text-white"
                   >
                     {index + 1}
                   </span>
@@ -62,7 +62,7 @@ export function Process() {
                     <h3 className="font-display text-3xl text-parchment sm:text-4xl">
                       {step.title}
                     </h3>
-                    <span className="text-[10px] uppercase tracking-[0.34em] text-gold">
+                    <span className="text-[10px] uppercase tracking-[0.34em] text-parchment">
                       Phase 0{index + 1}
                     </span>
                   </div>
@@ -71,7 +71,7 @@ export function Process() {
                     {step.items.map((item) => (
                       <li
                         key={item}
-                        className="border border-gold/20 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-smoke transition-colors duration-500 group-hover:border-gold/50 group-hover:text-parchment"
+                        className="border border-white/20 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-smoke transition-colors duration-500 group-hover:border-white/50 group-hover:text-parchment"
                       >
                         {item}
                       </li>

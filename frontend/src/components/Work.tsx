@@ -17,7 +17,7 @@ type CaseItem = {
   title: string;
   outcome: string;
   detail: string;
-  tone: "amber" | "ivory" | "ember" | "noir";
+  tone: "slate" | "pearl" | "ash" | "noir";
 };
 
 const cases: CaseItem[] = [
@@ -26,21 +26,21 @@ const cases: CaseItem[] = [
     title: "Heritage label, repositioned for a high-intent audience.",
     outcome: "+38% qualified inquiries · 90 days",
     detail: "Brand strategy, art direction, paid social system, conversion site.",
-    tone: "amber",
+    tone: "slate",
   },
   {
     category: "Founder Brand",
     title: "Editorial launch system around authority and momentum.",
     outcome: "4.6x social-to-site conversion",
     detail: "Narrative architecture, content engine, lead capture funnel.",
-    tone: "ivory",
+    tone: "pearl",
   },
   {
     category: "Hospitality",
     title: "Premium booking journey for a private members concept.",
     outcome: "Sold-out launch calendar in 21 days",
     detail: "Identity refinement, cinematic web experience, lifecycle ops.",
-    tone: "ember",
+    tone: "ash",
   },
   {
     category: "Tech Atelier",
@@ -52,14 +52,14 @@ const cases: CaseItem[] = [
 ];
 
 const palettes: Record<CaseItem["tone"], string> = {
-  amber:
-    "bg-[radial-gradient(circle_at_25%_15%,rgba(224,190,122,0.32),transparent_55%),linear-gradient(160deg,#1a1a1a,#070707)]",
-  ivory:
-    "bg-[radial-gradient(circle_at_75%_25%,rgba(245,242,234,0.18),transparent_55%),linear-gradient(160deg,#181818,#050505)]",
-  ember:
-    "bg-[radial-gradient(circle_at_50%_85%,rgba(198,93,32,0.22),transparent_55%),linear-gradient(160deg,#1a1310,#080302)]",
+  slate:
+    "bg-[radial-gradient(circle_at_25%_15%,rgba(255,255,255,0.22),transparent_55%),linear-gradient(160deg,#1a1a1a,#070707)]",
+  pearl:
+    "bg-[radial-gradient(circle_at_75%_25%,rgba(255,255,255,0.16),transparent_55%),linear-gradient(160deg,#181818,#050505)]",
+  ash:
+    "bg-[radial-gradient(circle_at_50%_85%,rgba(255,255,255,0.12),transparent_55%),linear-gradient(160deg,#141414,#050505)]",
   noir:
-    "bg-[radial-gradient(circle_at_15%_85%,rgba(224,190,122,0.18),transparent_60%),linear-gradient(160deg,#0d0d0d,#000000)]",
+    "bg-[radial-gradient(circle_at_15%_85%,rgba(255,255,255,0.14),transparent_60%),linear-gradient(160deg,#0d0d0d,#000000)]",
 };
 
 const GAP = 32;
@@ -141,9 +141,9 @@ export function Work() {
               </span>
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-gold transition-colors duration-300 hover:text-gold-bright"
+                className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-parchment transition-colors duration-300 hover:text-white"
               >
-                <span className="h-px w-8 bg-gold/60 transition-all duration-500 group-hover:w-16" />
+                <span className="h-px w-8 bg-white/60 transition-all duration-500 group-hover:w-16" />
                 Request deck
               </a>
             </div>
@@ -180,8 +180,8 @@ export function Work() {
             <span
               className={`block rounded-full transition-all duration-500 ${
                 i === activeIndex
-                  ? "h-1.5 w-6 bg-gold"
-                  : "h-1.5 w-1.5 bg-gold/30 group-hover:bg-gold/60"
+                  ? "h-1.5 w-6 bg-white"
+                  : "h-1.5 w-1.5 bg-white/30 group-hover:bg-white/60"
               }`}
             />
           </button>
@@ -193,13 +193,13 @@ export function Work() {
         animate={{ opacity: isLast ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         aria-hidden={!isLast}
-        className="pointer-events-none absolute bottom-10 right-8 z-10 flex flex-col items-end gap-2 text-[10px] uppercase tracking-[0.42em] text-gold"
+        className="pointer-events-none absolute bottom-10 right-8 z-10 flex flex-col items-end gap-2 text-[10px] uppercase tracking-[0.42em] text-parchment"
       >
         <span>Scroll to continue</span>
         <motion.span
           animate={{ y: [0, 5, 0], opacity: [0.4, 1, 0.4] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-          className="block h-5 w-px bg-gold"
+          className="block h-5 w-px bg-white"
         />
       </motion.div>
       </div>
@@ -220,7 +220,7 @@ function CaseCard({ item, index, isActive, widthPx, gapPx }: CaseCardProps) {
     <motion.div
       animate={{ scale: isActive ? 1 : 0.94, opacity: isActive ? 1 : 0.55 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex flex-shrink-0 flex-col justify-between overflow-hidden border border-gold/15 bg-ink p-8 will-change-transform sm:p-10"
+      className="group relative flex flex-shrink-0 flex-col justify-between overflow-hidden border border-white/15 bg-ink p-8 will-change-transform sm:p-10"
       style={{
         width: widthPx || "50vw",
         height: "62vh",
@@ -237,12 +237,12 @@ function CaseCard({ item, index, isActive, widthPx, gapPx }: CaseCardProps) {
         aria-hidden="true"
         animate={{ opacity: isActive ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="pointer-events-none absolute inset-0 border border-gold/40"
+        className="pointer-events-none absolute inset-0 border border-white/40"
       />
 
-      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.34em] text-gold">
+      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.34em] text-parchment">
         <span>{item.category}</span>
-        <span className="font-display text-3xl text-gold/70">0{index + 1}</span>
+        <span className="font-display text-3xl text-parchment/70">0{index + 1}</span>
       </div>
 
       <div className="flex flex-col gap-7">
@@ -252,13 +252,13 @@ function CaseCard({ item, index, isActive, widthPx, gapPx }: CaseCardProps) {
 
         <p className="max-w-md text-sm leading-7 text-smoke">{item.detail}</p>
 
-        <div className="h-px w-full bg-gold/25 transition-all duration-700 group-hover:bg-gold-bright" />
+        <div className="h-px w-full bg-white/25 transition-all duration-700 group-hover:bg-white" />
 
         <div className="flex items-end justify-between gap-4">
-          <p className="font-display text-xl text-gold-bright sm:text-2xl">{item.outcome}</p>
+          <p className="font-display text-xl text-white sm:text-2xl">{item.outcome}</p>
           <span
             aria-hidden="true"
-            className="grid h-12 w-12 place-items-center rounded-full border border-gold/40 text-gold transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:border-gold-bright group-hover:text-gold-bright"
+            className="grid h-12 w-12 place-items-center rounded-full border border-white/40 text-parchment transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:border-white group-hover:text-white"
           >
             ↗
           </span>

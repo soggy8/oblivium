@@ -32,7 +32,7 @@ export function Marquee({ items, duration = 38 }: MarqueeProps) {
             className="flex items-center gap-16 font-display text-2xl tracking-[-0.02em] text-parchment/85"
           >
             {item}
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" />
           </span>
         ))}
       </motion.div>

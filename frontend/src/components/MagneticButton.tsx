@@ -34,9 +34,9 @@ type Props = {
 
 const styles: Record<Variant, string> = {
   primary:
-    "bg-gold text-ink hover:bg-gold-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-bright",
+    "bg-white text-ink hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white",
   ghost:
-    "border border-gold/40 text-gold hover:border-gold-bright hover:text-gold-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-bright",
+    "border border-white/40 text-parchment hover:border-white hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white",
 };
 
 export const MagneticButton = forwardRef<HTMLAnchorElement, Props>(function MagneticButton(

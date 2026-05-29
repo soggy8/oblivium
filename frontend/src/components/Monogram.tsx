@@ -18,9 +18,9 @@ export function Monogram({ className, spin = false }: MonogramProps) {
       transition={spin ? { duration: 90, ease: "linear", repeat: Infinity } : undefined}
     >
       <defs>
-        <linearGradient id="oa-gold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#e0be7a" />
-          <stop offset="100%" stopColor="#7a5b27" />
+        <linearGradient id="oa-accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#8a8a8a" />
         </linearGradient>
       </defs>
 
@@ -29,7 +29,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
         cy="100"
         r="98"
         fill="none"
-        stroke="url(#oa-gold)"
+        stroke="url(#oa-accent)"
         strokeWidth="0.6"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
@@ -41,7 +41,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
         cy="100"
         r="84"
         fill="none"
-        stroke="rgba(198,161,91,0.6)"
+        stroke="rgba(255,255,255,0.6)"
         strokeWidth="0.4"
         strokeDasharray="2 6"
         initial={{ pathLength: 0, rotate: 0 }}
@@ -51,7 +51,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
       />
       <motion.path
         d="M100 4 L100 196 M4 100 L196 100"
-        stroke="rgba(198,161,91,0.35)"
+        stroke="rgba(255,255,255,0.35)"
         strokeWidth="0.3"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
@@ -60,7 +60,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
       />
       <motion.path
         d="M30 30 L170 170 M170 30 L30 170"
-        stroke="rgba(198,161,91,0.25)"
+        stroke="rgba(255,255,255,0.25)"
         strokeWidth="0.3"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
@@ -81,7 +81,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
           fontFamily="var(--font-display), serif"
           fontSize="78"
           fontWeight="600"
-          fill="url(#oa-gold)"
+          fill="url(#oa-accent)"
         >
           OA
         </text>
@@ -92,7 +92,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
           fontFamily="var(--font-sans), sans-serif"
           fontSize="6.4"
           letterSpacing="0.42em"
-          fill="rgba(198,161,91,0.85)"
+          fill="rgba(255,255,255,0.85)"
         >
           OBLIVIUM · ATELIER
         </text>
@@ -103,7 +103,7 @@ export function Monogram({ className, spin = false }: MonogramProps) {
           fontFamily="var(--font-sans), sans-serif"
           fontSize="5.6"
           letterSpacing="0.42em"
-          fill="rgba(198,161,91,0.7)"
+          fill="rgba(255,255,255,0.7)"
         >
           MMXXVI
         </text>

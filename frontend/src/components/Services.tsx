@@ -44,7 +44,7 @@ export function Services() {
           text="We shape the market signal, the visual world, and the conversion path together — engineered as one premium system."
         />
 
-        <div className="mt-16 grid gap-px overflow-hidden border border-gold/15 bg-gold/15 md:grid-cols-2">
+        <div className="mt-16 grid gap-px overflow-hidden border border-white/15 bg-white/15 md:grid-cols-2">
           {services.map((service, index) => (
             <Reveal key={service.title} delay={index * 0.06}>
               <ServiceCard index={index} service={service} />
@@ -67,7 +67,7 @@ function ServiceCard({ service, index }: CardProps) {
   const background = useTransform(
     [mouseX, mouseY],
     ([x, y]) =>
-      `radial-gradient(420px circle at ${x}px ${y}px, rgba(224,190,122,0.16), transparent 55%)`,
+      `radial-gradient(420px circle at ${x}px ${y}px, rgba(255,255,255,0.12), transparent 55%)`,
   );
 
   return (
@@ -89,10 +89,10 @@ function ServiceCard({ service, index }: CardProps) {
         style={{ background }}
       />
       <div className="flex items-baseline justify-between">
-        <span className="font-display text-6xl text-gold/60 transition-colors duration-500 group-hover:text-gold-bright">
+        <span className="font-display text-6xl text-parchment/60 transition-colors duration-500 group-hover:text-white">
           0{index + 1}
         </span>
-        <span className="h-px w-16 bg-gold/40 transition-all duration-500 group-hover:w-24 group-hover:bg-gold-bright" />
+        <span className="h-px w-16 bg-white/40 transition-all duration-500 group-hover:w-24 group-hover:bg-white" />
       </div>
 
       <div>
@@ -105,7 +105,7 @@ function ServiceCard({ service, index }: CardProps) {
           {service.pillars.map((pillar) => (
             <li
               key={pillar}
-              className="border border-gold/20 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-smoke transition-colors duration-500 group-hover:border-gold/50 group-hover:text-parchment"
+              className="border border-white/20 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-smoke transition-colors duration-500 group-hover:border-white/50 group-hover:text-parchment"
             >
               {pillar}
             </li>

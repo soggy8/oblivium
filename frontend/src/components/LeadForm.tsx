@@ -92,7 +92,7 @@ export function LeadForm() {
         disabled={state === "loading"}
         whileHover={state === "loading" ? undefined : { scale: 1.015 }}
         whileTap={state === "loading" ? undefined : { scale: 0.985 }}
-        className="group relative mt-3 inline-flex items-center justify-center overflow-hidden rounded-full bg-gold px-9 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-ink transition-all duration-300 hover:bg-gold-bright disabled:cursor-not-allowed disabled:opacity-60"
+        className="group relative mt-3 inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-9 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-ink transition-all duration-300 hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
       >
         <span className="relative z-10 flex items-center gap-3">
           {state === "loading" ? (
@@ -108,7 +108,7 @@ export function LeadForm() {
         </span>
         <span
           aria-hidden="true"
-          className="absolute inset-0 -translate-x-full bg-gradient-to-r from-gold-bright via-parchment to-gold-bright opacity-30 transition-transform duration-700 group-hover:translate-x-full"
+          className="absolute inset-0 -translate-x-full bg-gradient-to-r from-white via-parchment to-white opacity-30 transition-transform duration-700 group-hover:translate-x-full"
         />
       </motion.button>
 
@@ -121,7 +121,7 @@ export function LeadForm() {
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             role="status"
-            className={`text-sm ${state === "success" ? "text-gold-bright" : "text-red-300"}`}
+            className={`text-sm ${state === "success" ? "text-white" : "text-smoke"}`}
           >
             {message}
           </motion.p>

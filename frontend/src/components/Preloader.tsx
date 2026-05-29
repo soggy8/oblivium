@@ -80,7 +80,7 @@ export function Preloader() {
               initial={{ opacity: 0, letterSpacing: "0.6em" }}
               animate={{ opacity: 1, letterSpacing: "0.42em" }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[10px] uppercase text-gold"
+              className="text-[10px] uppercase text-parchment"
             >
               Oblivium Atelier
             </motion.p>
@@ -92,12 +92,12 @@ export function Preloader() {
               {String(count).padStart(3, "0")}
             </motion.p>
 
-            <div className="relative h-px w-56 overflow-hidden bg-gold/20">
+            <div className="relative h-px w-56 overflow-hidden bg-white/20">
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: count / 100 }}
                 transition={{ ease: "linear" }}
-                className="h-full w-full origin-left bg-gradient-to-r from-gold to-gold-bright"
+                className="h-full w-full origin-left bg-gradient-to-r from-parchment to-white"
               />
             </div>
 
